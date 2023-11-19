@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 3rem 6rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+header .menu {
+  width: 40%;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+header li {
+  transition: 0.2s;
+}
+header li:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+main .section-one {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+main .section-one img {
+  width: 100%;
+}
+main .section-one .section-one-topic {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-top: 2rem;
+}
+main .section-one .section-one-topic h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+main .section-one .section-one-topic .topic-description {
+  display: flex;
+  flex-direction: column;
+}
+main .section-one .section-one-topic .topic-description p {
+  font-size: 1rem;
+}
+main .section-one .section-one-topic .topic-description button {
+  width: fit-content;
+  margin-top: auto;
+  padding: 0.8rem 1.6rem;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.2s;
+}
+main .section-one .section-one-topic .topic-description button:hover {
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+main .section-two {
+  width: 30%;
+  background-color: hsl(240, 100%, 5%);
+  color: #fff;
+  padding: 2rem 0.8rem;
+}
+main .section-two .section-two-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(35, 77%, 62%);
+}
+main .section-two .new-topic {
+  padding: 1.8rem 0rem;
+}
+main .section-two .new-topic h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  transition: 0.2s;
+}
+main .section-two .new-topic h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+main .section-two .new-topic p {
+  font-size: 0.9rem;
+  color: hsl(233, 8%, 79%);
+}
+main .section-two .new-topic:nth-child(1),
+main .section-two .new-topic:nth-child(2) {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.popular-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.popular-container .popular-topic {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+}
+.popular-container .popular-topic img {
+  width: 24%;
+}
+.popular-container .popular-topic div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popular-container .popular-topic h3 {
+  font-size: 2rem;
+  color: hsl(233, 8%, 79%);
+}
+.popular-container .popular-topic h4 {
+  width: fit-content;
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+  transition: 0.2s;
+}
+.popular-container .popular-topic h4:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.popular-container .popular-topic p {
+  font-size: 0.9rem;
+  color: hsl(236, 13%, 42%);
+}
