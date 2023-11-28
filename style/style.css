@@ -13,6 +13,30 @@ body {
   padding: 3rem 6rem;
 }
 
+.mobile-menu {
+  display: none;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  font-size: 1.2rem;
+  padding: 3rem 6rem 1rem 1rem;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style-type: none;
+  margin-top: 3rem;
+}
+.mobile-menu ul li {
+  transition: 0.2s;
+  cursor: pointer;
+}
+.mobile-menu ul li:hover {
+  color: hsl(35, 77%, 62%);
+}
+
 header {
   width: 100%;
   display: flex;
@@ -24,6 +48,15 @@ header {
 header h1 {
   font-size: 3rem;
   font-weight: 800;
+}
+header #menu-icons-container {
+  display: none;
+}
+header #menu-icons-container #close-menu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
 }
 header .menu {
   width: 40%;
@@ -158,4 +191,67 @@ main .section-two .new-topic:nth-child(2) {
 .popular-container .popular-topic p {
   font-size: 0.9rem;
   color: hsl(236, 13%, 42%);
+}
+
+@media (max-width: 950px) {
+  header ul {
+    gap: 12px;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    width: 80%;
+  }
+  .popular-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .popular-container .popular-topic div {
+    justify-content: space-evenly;
+  }
+  main .section-one .section-one-topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .section-one .section-one-topic .topic-description button {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 670px) {
+  body {
+    padding: 1rem 2rem;
+  }
+  header {
+    width: 100%;
+  }
+  header .menu {
+    display: none;
+  }
+  header #menu-icons-container {
+    display: block;
+  }
+  header #menu-icons-container #hamburger-menu {
+    padding: 1rem;
+    cursor: pointer;
+  }
+  header #menu-icons-container #close-menu {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 0.4rem 0.6rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main .section-one {
+    width: 100%;
+  }
+  main .section-two {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }

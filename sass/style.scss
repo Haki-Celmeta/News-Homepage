@@ -16,6 +16,31 @@ body {
   padding: 3rem 6rem;
 }
 
+.mobile-menu {
+  display: none;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  font-size: 1.2rem;
+  padding: 3rem 6rem 1rem 1rem;
+
+  ul {
+    @include displayFlex(column);
+    gap: 12px;
+    list-style-type: none;
+    margin-top: 3rem;
+
+    li {
+      transition: $default-transition;
+      cursor: pointer;
+    }
+    li:hover {
+      color: $soft-orange-color;
+    }
+  }
+}
+
 header {
   width: 100%;
   @include displayFlex(row);
@@ -26,6 +51,17 @@ header {
   h1 {
     font-size: 3rem;
     font-weight: 800;
+  }
+
+  #menu-icons-container {
+    display: none;
+
+    #close-menu {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      cursor: pointer;
+    }
   }
 
   .menu {
@@ -169,6 +205,81 @@ main {
     p {
       font-size: 0.9rem;
       color: $border-grey-blue-color;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  header ul {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    width: 80%;
+  }
+
+  .popular-container {
+    @include displayFlex(column);
+
+    .popular-topic div {
+      justify-content: space-evenly;
+    }
+  }
+
+  main .section-one .section-one-topic {
+    @include displayFlex(column);
+    justify-content: space-between;
+
+    .topic-description button {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  body {
+    padding: 1rem 2rem;
+  }
+
+  header {
+    width: 100%;
+
+    .menu {
+      display: none;
+    }
+
+    #menu-icons-container {
+      display: block;
+
+      #hamburger-menu {
+        padding: 1rem;
+        cursor: pointer;
+      }
+
+      #close-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.4rem 0.6rem;
+  }
+
+  main {
+    @include displayFlex(column);
+
+    .section-one {
+      width: 100%;
+    }
+
+    .section-two {
+      width: 100%;
+      margin-top: 2rem;
     }
   }
 }
